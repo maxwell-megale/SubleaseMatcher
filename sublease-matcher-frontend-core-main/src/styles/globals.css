@@ -1,0 +1,23 @@
+/* Tailwind v4: just import once */
+@import "tailwindcss";
+
+/* Your global design tokens */
+:root{
+  --radius: .75rem;
+  /* Map legacy app variables to the theme tokens declared in theme_uwec.css
+     so components that reference --primary / --primary-foreground keep
+     working while the color palette lives in --color-* tokens. */
+  --background: var(--color-primary-foreground, #ffffff);
+  --foreground: var(--color-primary-950, oklch(.145 0 0));
+  --card: var(--color-primary-50, oklch(1 0 0));
+  --primary: var(--color-primary, #232c99);
+  --primary-hover: var(--color-primary-950, #131653);
+  --primary-foreground: var(--color-primary-foreground, #ffffff);
+  --secondary: var(--color-secondary, #edac1a);
+   /* brand underline color used across auth pages */
+   --brand-underline: var(--color-accent, var(--secondary));
+}
+
+/* (Optional) any global resets or custom classes go here.
+   v4 no longer uses @layer base/components/utilities — just write normal CSS. */
+* { -webkit-tap-highlight-color: transparent; }

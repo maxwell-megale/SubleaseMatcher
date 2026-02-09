@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sublease-matcher-core"
+version = "0.1.0"
+description = "Pure domain, ports, and services layer for Sublease Matcher."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Sublease Matcher Team" }]
+keywords = ["sublease", "matcher", "clean-architecture", "domain-driven-design"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sublease_matcher*"]
+
+[tool.setuptools.package-data]
+"sublease_matcher.core" = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "B",
+    "I",
+    "N",
+    "UP",
+    "S",
+    "A",
+    "C4",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+show_error_codes = true
+pretty = true
+files = ["src"]

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #232c99;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #edac1a;
+  --color-secondary-foreground: #000000;
+
+  /* Created levels by going to https://uicolors.app/generate/ffffff and autogenerating them. */
+  --color-primary-50: #ebf3ff;
+  --color-primary-100: #dbe8ff;
+  --color-primary-200: #bed4ff;
+  --color-primary-300: #97b7ff;
+  --color-primary-400: #6e8cff;
+  --color-primary-500: #4c64ff;
+  --color-primary-600: #2c38ff;
+  --color-primary-700: #2027e2;
+  --color-primary-800: #1d24b6;
+  --color-primary-900: #232c99;
+  --color-primary-950: #131653;
+
+  --color-secondary-50: #fdf9e9;
+  --color-secondary-100: #fbf0c6;
+  --color-secondary-200: #f8e090;
+  --color-secondary-300: #f3c851;
+  --color-secondary-400: #edac1a;
+  --color-secondary-500: #de9714;
+  --color-secondary-600: #bf730f;
+  --color-secondary-700: #99510f;
+  --color-secondary-800: #7f4214;
+  --color-secondary-900: #6c3617;
+  --color-secondary-950: #3f1a09;
+}
+
+/*a {
+  text-decoration: underline;
+  color: var(--color-primary-400);
+}
+a:hover {
+  color: var(--color-primary-500);
+}
+*/
